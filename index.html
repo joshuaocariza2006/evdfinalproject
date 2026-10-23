@@ -53,11 +53,10 @@
 <button class="button primary full" id="add-to-cart">Add item to order <span>＋</span></button><p id="cart-message" class="feedback" aria-live="polite">Your cart is ready.</p></div>
 <div class="cart-panel"><div class="cart-title"><h3>Your Cart (<span id="cart-count">0</span>)</h3><button id="clear-cart" class="clear-button">Clear</button></div><div id="cart-items"><p class="empty-cart">Your order is empty. Add a lumpia from the menu.</p></div><div class="cart-total"><span>Total</span><strong id="cart-total">₱0</strong></div>
 <form id="checkout-form"><h3>Customer details</h3><label for="customer-name">Full name</label><input id="customer-name" required placeholder="Enter your name"><label for="customer-contact">Contact number or email</label><input id="customer-contact" required placeholder="How can we reach you?"><label for="order-type">Order type</label><select id="order-type"><option>Pickup</option><option>Delivery (confirm availability)</option></select><label for="notes">Special instructions (optional)</label><textarea id="notes" rows="2" placeholder="Flavor preference or other notes"></textarea><button class="button primary full" type="submit">Review order details <span>→</span></button></form><div id="order-result" class="order-result" role="status"></div></div></div>
-<p class="small-note">This is a classroom demo. It calculates an order locally and does not send payments or orders to a real business.</p></section>
-<section class="story-section" id="story"><div><p class="eyebrow">OUR LITTLE BUSINESS</p><h2>Simple snacks.<br><em>Made for everyone.</em></h2></div><p>Lumpiara is a student food business that sells affordable carrot lumpia in different flavors. Customers can choose original, spicy, cheesy, or special carrot lumpia.</p><div class="story-stat"><strong>₱5–₱10</strong><span>Proposed price range per piece</span></div></section>
+<p class="small-note"></p></section>
+<section class="story-section" id="story"><div><p class="eyebrow">OUR LITTLE BUSINESS</p><h2>Simple snacks.<br><em>Made for everyone.</em></h2></div><p>Lumpiara is a student food business that sells affordable carrot lumpia in different flavors. Customers can choose original, spicy, cheesy, or special carrot lumpia.</p><div class="story-stat"><strong></strong><span></span></div></section>
 </main>
-<footer id="contact"><div class="footer-brand"><div class="footer-logo"><img src="assets/logo.png" alt=""><span>Lumpiara</span></div><p>Carrot lumpia • Good vibes</p></div><div><h3>Explore</h3><a href="#products">Our products</a><a href="#promo">Promo video</a><a href="#order">Build an order</a></div><div><h3>Contact</h3><p>Cebu Eastern College, Inc. area</p><p>Contact details to be added by the group</p></div><div><h3>Follow along</h3><p>New flavors, student-friendly snacks, and more.</p></div><div class="copyright">© 2026 Lumpiara · Student business project</div></footer>
-
+<footer id="contact"><div class="footer-brand"><div class="footer-logo"><img src="assets/logo.png" alt=""><span>Lumpiara</span></div><p>Freshly rolled | Ready to crunch</p></div><div><h3>Explore</h3><a href="#products">Our products</a><a href="#promo">Promo video</a><a href="#order">Build an order</a></div><div><h3></h3><p></p><p></p></div><div><h3></h3><p></p></div><div class="copyright">© 2026 Lumpiara · Cebu Eastern College </div></footer>
 <div class="review-modal" id="review-modal" role="dialog" aria-modal="true" aria-labelledby="review-modal-title">
   <div class="review-modal-card">
     <div class="review-modal-icon" aria-hidden="true">✓</div>
@@ -207,7 +206,7 @@
     summary.textContent = `Customer: ${name}\nContact: ${contact}\nOrder type: ${type}\n\n${lines.join('\n')}\n\nTOTAL: ${peso(t.total)}${notes ? `\nNotes: ${notes}` : ''}`;
     orderResult.append(heading, summary);
     orderResult.classList.remove('error');
-
+    // Show a clear mock confirmation popup after the order details are reviewed.
     document.getElementById('review-modal-summary').textContent = summary.textContent;
     document.getElementById('review-modal').classList.add('show');
     document.body.style.overflow = 'hidden';
